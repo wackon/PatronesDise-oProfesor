@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67AB24DE-EADC-4A8F-8F30-8B0232CE8501}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pPatronesDiseño</RootNamespace>
+    <AssemblyName>pPatronesDiseño</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.117.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.117.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fAbstractFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAbstractFactory.Designer.cs">
+      <DependentUpon>fAbstractFactory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAdapter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAdapter.Designer.cs">
+      <DependentUpon>fAdapter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaseDatos.Designer.cs">
+      <DependentUpon>fBaseDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBridge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBridge.Designer.cs">
+      <DependentUpon>fBridge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBuilder.Designer.cs">
+      <DependentUpon>fBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fChainResponsability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChainResponsability.Designer.cs">
+      <DependentUpon>fChainResponsability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCommand.Designer.cs">
+      <DependentUpon>fCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fComposite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fComposite.Designer.cs">
+      <DependentUpon>fComposite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDecorator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDecorator.Designer.cs">
+      <DependentUpon>fDecorator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fFacade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fFacade.Designer.cs">
+      <DependentUpon>fFacade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fFlyWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fFlyWeight.Designer.cs">
+      <DependentUpon>fFlyWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fIterator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fIterator.Designer.cs">
+      <DependentUpon>fIterator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMediator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMediator.Designer.cs">
+      <DependentUpon>fMediator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMemento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMemento.Designer.cs">
+      <DependentUpon>fMemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMenu.Designer.cs">
+      <DependentUpon>fMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fObserver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fObserver.Designer.cs">
+      <DependentUpon>fObserver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPrototype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPrototype.Designer.cs">
+      <DependentUpon>fPrototype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fProxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fProxy.Designer.cs">
+      <DependentUpon>fProxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSingleton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSingleton.Designer.cs">
+      <DependentUpon>fSingleton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fState.Designer.cs">
+      <DependentUpon>fState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fStrategy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fStrategy.Designer.cs">
+      <DependentUpon>fStrategy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTemplateMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTemplateMethod.Designer.cs">
+      <DependentUpon>fTemplateMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fVisitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fVisitor.Designer.cs">
+      <DependentUpon>fVisitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patrones\Clases\Configuracion.cs" />
+    <Compile Include="Patrones\Clases\libUsuario.cs" />
+    <Compile Include="Patrones\Comportamiento\ChainOfResponsability\libChainResponsability.cs" />
+    <Compile Include="Patrones\Comportamiento\Command\libCommand.cs" />
+    <Compile Include="Patrones\Comportamiento\Iterator\libIterator.cs" />
+    <Compile Include="Patrones\Comportamiento\Mediator\libMediator.cs" />
+    <Compile Include="Patrones\Comportamiento\Memento\libMemento.cs" />
+    <Compile Include="Patrones\Comportamiento\Observer\libObserver.cs" />
+    <Compile Include="Patrones\Comportamiento\State\libState.cs" />
+    <Compile Include="Patrones\Comportamiento\Strategy\libStrategy.cs" />
+    <Compile Include="Patrones\Comportamiento\TemplateMethod\libTemplateMethod.cs" />
+    <Compile Include="Patrones\Comportamiento\Visitor\libVisitor.cs" />
+    <Compile Include="Patrones\Creacionales\Abstract Factory\libAbstractFactory.cs" />
+    <Compile Include="Patrones\Creacionales\Abstract Factory\libBaseDatosAbstract.cs" />
+    <Compile Include="Patrones\Creacionales\Abstract Factory\libConexionAccess.cs" />
+    <Compile Include="Patrones\Creacionales\Abstract Factory\libConexionSQL.cs" />
+    <Compile Include="Patrones\Creacionales\Abstract Factory\libConexionSQLite.cs" />
+    <Compile Include="Patrones\Creacionales\Builder\libBuilder.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\DatosEstudiante.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\EstudianteCreator.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\iEstudiante.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\Postgrado.cs" />
+    <Compile Include="Patrones\Creacionales\Factory Method\Pregrado.cs" />
+    <Compile Include="Patrones\Creacionales\Prototype\libPrototype.cs" />
+    <Compile Include="Patrones\Creacionales\Singleton\libSingleton.cs" />
+    <Compile Include="Patrones\Estructurales\Adapter\libAdapter.cs" />
+    <Compile Include="Patrones\Estructurales\Bridge\libBridge.cs" />
+    <Compile Include="Patrones\Estructurales\Composite\libComposite.cs" />
+    <Compile Include="Patrones\Estructurales\Decorator\libDecorator.cs" />
+    <Compile Include="Patrones\Estructurales\Facade\libFacade.cs" />
+    <Compile Include="Patrones\Estructurales\FlyWeight\libFlyWeight.cs" />
+    <Compile Include="Patrones\Estructurales\Proxy\libProxy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAbstractFactory.resx">
+      <DependentUpon>fAbstractFactory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAdapter.resx">
+      <DependentUpon>fAdapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBaseDatos.resx">
+      <DependentUpon>fBaseDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBridge.resx">
+      <DependentUpon>fBridge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBuilder.resx">
+      <DependentUpon>fBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChainResponsability.resx">
+      <DependentUpon>fChainResponsability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCommand.resx">
+      <DependentUpon>fCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fComposite.resx">
+      <DependentUpon>fComposite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDecorator.resx">
+      <DependentUpon>fDecorator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fFacade.resx">
+      <DependentUpon>fFacade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fFlyWeight.resx">
+      <DependentUpon>fFlyWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fIterator.resx">
+      <DependentUpon>fIterator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMediator.resx">
+      <DependentUpon>fMediator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMemento.resx">
+      <DependentUpon>fMemento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMenu.resx">
+      <DependentUpon>fMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPrototype.resx">
+      <DependentUpon>fPrototype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fProxy.resx">
+      <DependentUpon>fProxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSingleton.resx">
+      <DependentUpon>fSingleton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fState.resx">
+      <DependentUpon>fState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fStrategy.resx">
+      <DependentUpon>fStrategy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTemplateMethod.resx">
+      <DependentUpon>fTemplateMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fVisitor.resx">
+      <DependentUpon>fVisitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
